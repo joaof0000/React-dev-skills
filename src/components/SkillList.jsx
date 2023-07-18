@@ -1,16 +1,12 @@
 import React from 'react';
-import SkillListItem from './SkillListItem';
-import './SkillList.css';
+import "./SkillListItem.css";
 
-
-function SkillList() {
+function SkillListItem({ skill }) {
   return (
-    <ul>
-      <SkillListItem />
-      <SkillListItem />
-      <SkillListItem />
-    </ul>
+    <li>
+      {skill.name} - Level {skill.level}
+    </li>
   );
 }
 
-export default SkillList;
+export default SkillListItem;

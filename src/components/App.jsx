@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SkillList from './SkillList';
 
-const skills = [
+const initialSkills = [
   { name: "HTML", level: 5 },
   { name: "CSS", level: 3 },
   { name: "JavaScript", level: 4 },
@@ -9,7 +9,14 @@ const skills = [
 ];
 
 function App() {
-  return <h1>React Skills</h1>;
+  const [skills, setSkills] = useState(initialSkills);
+
+  return (
+    <div>
+      <h1>React Dev Skills</h1>
+      <SkillList skills={skills} />
+    </div>
+  );
 }
 
 export default App;
