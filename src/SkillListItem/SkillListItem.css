@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem;
-  padding: 0.2rem 0.6rem;
+  margin: 0.8rem;
+  padding: 0.9rem 2.7rem;
   border: 0.2rem solid coral;
   border-radius: 0.3rem;
   list-style: none;
@@ -13,11 +13,11 @@
 }
 
 .SkillListItem > .level {
-  margin-left: 5rem;
-  padding: 0.3rem 0.8rem;
+  margin-left: 11rem;
+  padding: 0.2rem 0.8rem;
   color: white;
   background-color: teal;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   font-size: 0.8rem;
   font-weight: normal;
 }

@@ -1,27 +1,22 @@
-import './NewSkillForm.css'
-import { useState } from 'react'
+import React, { useState } from 'react';
+import './NewSkillForm.css';
 
-export default function NewSkillForm(props) {
+const NewSkillForm = (props) => {
   const [skill, setSkill] = useState({
     name: '',
-    level: 3
-  })
+    level: 3,
+  });
 
-  function handleChange(e) {
-    console.log(e.target.value)
-    setSkill({ ...skill, [e.target.name]: e.target.value })
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSkill((prevSkill) => ({ ...prevSkill, [name]: value }));
+  };
 
-  function handleSubmit(e) {
-    // this ensures tha the form does not trigger a full-page refresh when the button is clicked
-    e.preventDefault()
-    props.addNewSkill(skill)
-
-    setSkill({
-      name: '',
-      level: 3
-    })
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.addNewSkill(skill);
+    setSkill({ name: '', level: 3 });
+  };
 
   return (
     <form className="NewSkillForm" onSubmit={handleSubmit}>
@@ -34,19 +29,16 @@ export default function NewSkillForm(props) {
         onChange={handleChange}
       />
       <label>Level</label>
-      <select
-        id="levels"
-        name="level"
-        onChange={handleChange}
-        value={skill.level}
-      >
-        <option value={1}>1</option>
-        <option value={2}>2</option>
-        <option value={3}>3</option>
-        <option value={4}>4</option>
-        <option value={5}>5</option>
+      <select id="levels" name="level" onChange={handleChange} value={skill.level}>
+        {[1, 2, 3, 4, 5].map((value) => (
+          <option key={value} value={value}>
+            {value}
+          </option>
+        ))}
       </select>
-      <button>ADD SKILL</button>
+      <button type="submit">ADD SKILL</button>
     </form>
-  )
-}
+  );
+};
+
+export default NewSkillForm;

@@ -1,15 +1,15 @@
 .NewSkillForm {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+  display: grid !important;
+  grid-template-columns: repeat(0.6, 2.7rem);
+  gap: 1.3rem;
   align-items: center;
   font-size: 1rem;
   font-weight: bold;
   color: teal;
   text-align: left;
   border: 0.2rem solid coral;
-  border-radius: 0.3rem;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 2.2rem;
 }
 
 .NewSkillForm > input,
@@ -17,19 +17,19 @@
   font-size: 1rem;
   font-weight: bold;
   color: teal;
-  padding: 0.2rem;
+  padding: 0.3rem;
   border: 0.2rem solid coral;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   outline: none;
 }
 
 .NewSkillForm > button {
-  grid-column: span 2;
+  grid-column: span 4;
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  padding: 0.2rem;
+  padding: 0.3rem;
   background-color: teal;
   border: 0.2rem solid teal;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
 }
